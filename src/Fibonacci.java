@@ -29,7 +29,26 @@ public class Fibonacci {
     }
     return pred2;
   }
+
+  /** computes the sum of the digits in a positive integer
+   * eg digitalTotal(1234) = 1+2+3+4 = 10
+   *
+   * @param int n
+   * @return the sum of the digits
+   *
+   * @author  Lennart Wissel
+   * @version 10.10.2014
+   */
+  public static int digitTotal(int n) {
+    int sum = 0;
+    for(int i = 1; i <=n; n=n/10) {
+      sum = sum + (n%10);
+    }
+    return sum;
+  }
+
   public static void main(String[] args){
     System.out.println(fibonacci(5));
+    System.out.println(digitTotal(3));
   }
 }
